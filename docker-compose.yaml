@@ -1,0 +1,18 @@
+
+
+services:
+  postgres-db:
+    image: postgres:latest
+    container_name: postgres-job
+    environment:
+      POSTGRES_USER: admin1
+      POSTGRES_PASSWORD: admin1
+      POSTGRES_DB: postgres_job
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    restart: always
+
+volumes:
+  postgres-data:
