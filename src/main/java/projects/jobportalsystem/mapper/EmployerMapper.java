@@ -10,7 +10,7 @@ import projects.jobportalsystem.entity.Employer;
 public interface EmployerMapper {
 
     @Mapping(target = "id", ignore = true)
-    @Mapping(target = "vacancies", ignore = true)
+   @Mapping(target = "vacancies", ignore = true)
     Employer toEntity(EmployerRequest request);
 
     EmployerResponse toResponse(Employer employer);
